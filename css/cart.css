@@ -1,0 +1,188 @@
+/* ------------------- Cart Dropdown ------------------- */
+#cart-dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+    z-index: 1000;
+    display: none; /* hide by default */
+}
+
+/* Cart items inside dropdown */
+#cart-dropdown div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart-dropdown img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#cart-dropdown .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#cart-dropdown .checkout {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #bfa45a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#cart-dropdown .checkout:hover {
+    background-color: #a68a42;
+}
+
+/* Cart counter */
+#cart-counter {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ------------------- Modals ------------------- */
+.modal {
+    display: none; /* hide by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal inputs */
+.modal-content input,
+.modal-content textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Modal buttons */
+.modal-content button,
+.modal-content .payment-option {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-content button {
+    background-color: #bfa45a;
+    color: #fff;
+}
+
+.modal-content button:hover {
+    background-color: #a68a42;
+}
+
+.payment-option {
+    background-color: #555;
+    color: #fff;
+}
+
+.payment-option:hover {
+    background-color: #333;
+}
+
+#card-form input {
+    margin-bottom: 10px;
+}
+
+#cart-dropdown {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    top: 40px;
+    right: 0;
+    z-index: 1000;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#cart-dropdown img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+@media (max-width: 768px) {
+    #cart-dropdown {
+        width: 95%;
+        left: 2.5%;
+        right: 2.5%;
+        top: 50px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 80px auto;
+    }
+
+    #cart-dropdown img {
+        width: 35px;
+        height: 35px;
+    }
+}
+

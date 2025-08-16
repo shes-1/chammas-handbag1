@@ -1,0 +1,170 @@
+/* ------------------- Product Grid ------------------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ------------------- Product Card ------------------- */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* ------------------- Product Image ------------------- */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+/* ------------------- Product Title & Price ------------------- */
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.product-card p {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ------------------- Hover Effect ------------------- */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #bfa45a;
+}
+
+/* ------------------- Card Footer (Buttons) ------------------- */
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-footer button {
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-footer button:hover {
+    transform: scale(1.1);
+}
+
+.add-to-cart {
+    background: #bfa45a;
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background: #a68a42;
+}
+
+.inquiry-btn {
+    background: #555;
+    color: #fff;
+}
+
+.inquiry-btn:hover {
+    background: #333;
+}
+
+/* ------------------- Filters ------------------- */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: 1px solid #bfa45a;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active-filter {
+    background: #bfa45a;
+    color: #fff;
+}
+
+/* ------------------- No Products Found ------------------- */
+.no-products {
+    text-align: center;
+    color: #555;
+    grid-column: 1 / -1;
+    font-size: 18px;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width:768px){
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* ensures image fits, no cropping */
+}
+
+.card-footer button {
+    padding: 8px;
+    font-size: 16px;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* stack products vertically */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .card-footer {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .card-footer button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
